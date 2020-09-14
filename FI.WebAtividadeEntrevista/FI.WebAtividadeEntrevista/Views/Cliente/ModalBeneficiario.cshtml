@@ -1,0 +1,85 @@
+﻿
+
+<div class="modal fade" id="divModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Beneficiarios</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Nome">Nome</label>
+                            <input type="text" class="form-control" placeholder="Ex:Jão da Silva" id="Nome" name="Nome" maxlength="50" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="CPF">CPF</label>
+                            <input type="text" class="form-control" id="CPF" name="CPF" placeholder="034.003.301-00" maxlength="11" />
+                        </div>
+                    </div>
+                    <div style="margin-top:24px; padding:0;" class="col-md-2">
+                        <button type="button" class="btn btn-success" onclick="new CadBeneficiario().incluir()">Incluir</button>
+                    </div>
+                </div>
+
+                <table id="gridBeneficiarios" class="table table-bordered table-hover">
+                    <thead style="background-color:#ccc">
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th style='text-align:center'>Açoes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalAltBeneficiario" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Alteracao Beneficiario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="CPF">CPF</label>
+                            <input type="text" class="form-control" id="CPF" name="CPF" placeholder="034.003.301-00" maxlength="11" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Nome">Nome</label>
+                            <input type="text" class="form-control" placeholder="Ex:Jão da Silva" id="Nome" name="Nome" maxlength="11" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="new CadBeneficiario().salvar()" data-dismiss="modal">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
